@@ -181,7 +181,7 @@ public class ClientConfig implements ConfigCore {
 
         public int getTextColor(int damageAmount) {
             DyeColor color = damageAmount > 0 ? this.healColor : this.damageColor;
-            return ARGB.opaque(color.getTextColor());
+            return ARGB.opaque(net.minecraft.client.renderer.blockentity.AbstractSignRenderer.DARK_TEXT_COLORS.pick(color));
         }
     }
 
